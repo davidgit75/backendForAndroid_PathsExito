@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 var router = express.Router();
 var modelPath = require('./modelPath');
 
-mongoose.connect('mongodb://localhost/pathsExito');
+mongoose.connect('mongodb://dbuser:rootdb*@ds149577.mlab.com:49577/pathsexito');
 
 router.get('/paths', function(req, res){
   modelPath.find({}, function(err, paths){
